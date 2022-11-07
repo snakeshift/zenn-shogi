@@ -1,0 +1,29 @@
+// フェード
+.fade-enter-from {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// 横スライド
+.slideX-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.slideX-enter-active,
+.slideX-leave-active {
+  transition: all 0.32s;
+}
+.slideX-enter,
+.slideX-leave-to {
+  opacity: 0;
+  transform: translateX(-10px);
+}

@@ -1,7 +1,14 @@
+import unpluginVueDefineOptions from 'unplugin-vue-define-options/vite'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: false,
+  typescript: {
+    shim: false,
+    strict: true,
+  },
   srcDir: 'src/',
+  css: ['@/assets/styles/index.scss'],
   modules: ['@pinia/nuxt'],
   vite: {
     define: {
@@ -10,11 +17,11 @@ export default defineNuxtConfig({
     },
     css: {
       preprocessorOptions: {
-        // scss: {
-        //   additionalData: `
-        //     @import "@/assets/styles/variable.scss";
-        //   `,
-        // },
+        scss: {
+          additionalData: `
+            @import "@/assets/styles/variable.scss";
+          `,
+        },
       },
     },
     resolve: {
@@ -22,6 +29,6 @@ export default defineNuxtConfig({
         './runtimeConfig': './runtimeConfig.browser',
       },
     },
-    // plugins: [unpluginVueDefineOptions()],
+    plugins: [unpluginVueDefineOptions()],
   },
 })

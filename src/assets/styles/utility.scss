@@ -1,0 +1,45 @@
+@mixin space-loop($className, $styleName) {
+  @for $i from 0 through 25 {
+    #{$className}-#{$i} {
+      #{$styleName}: #{$i * 4}px;
+    }
+  }
+}
+// padding (例: pr-25)
+@include space-loop('.pt', 'padding-top');
+@include space-loop('.pb', 'padding-bottom');
+@include space-loop('.pl', 'padding-left');
+@include space-loop('.pr', 'padding-right');
+// margin (例: mt-1)
+@include space-loop('.mt', 'margin-top');
+@include space-loop('.mb', 'margin-bottom');
+@include space-loop('.ml', 'margin-left');
+@include space-loop('.mr', 'margin-right');
+// width
+.w-100p {
+  width: 100%;
+}
+// height
+.h-100p {
+  height: 100%;
+}
+// flex
+.d-flex {
+  display: flex;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+// font
+.font-weight-bold {
+  font-weight: bold;
+}
+.font-weight-normal {
+  font-weight: normal;
+}

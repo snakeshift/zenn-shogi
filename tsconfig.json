@@ -1,4 +1,11 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "element-plus/global",
+      "unplugin-vue-define-options/macros-global"
+    ]
+  },
+  "exclude": ["node_modules", "output", "assets"]
 }

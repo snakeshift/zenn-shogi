@@ -12,8 +12,11 @@
       "AmplifyAppId": "d239wzdul2fw16"
     },
     "categories": {
+      "api": {
+        "shogi": {}
+      },
       "auth": {
-        "shogie0746b26": {}
+        "shogif64e825a": {}
       }
     }
   }

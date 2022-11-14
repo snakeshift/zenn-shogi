@@ -37,8 +37,8 @@ export type FlattenBoard = Record<number, Piece>
 export type SfenStr = keyof typeof SFEN_TO_KOMA
 
 export const TEBAN = {
-  SENTE: 1,
-  GOTE: 2,
+  SENTE: 'b',
+  GOTE: 'w',
 } as const
 
 export const POINTS: number[][] = [
@@ -276,4 +276,4 @@ export const SFEN_TO_IS_NARI = {
 } as const
 
 export const INITIAL_SFEN =
-  'lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL'
+  'position sfen lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1 moves'

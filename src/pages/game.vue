@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  definePageMeta({
+    middleware: ['auth'],
+    pageTransition: {
+      name: 'slide',
+    },
+  })
+</script>
 
 <template>
   <div class="page-game">

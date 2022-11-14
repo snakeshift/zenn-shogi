@@ -19,7 +19,7 @@
 
 <template>
   <div class="domain-shogiMasuBlock" :class="{ isDark }" @click="selectMasu">
-    <span class="index">{{ masu.position }}</span>
+    <!-- <span class="index">{{ masu.position }}</span> -->
     <DomainShogiPieceBlock
       v-if="masu.piece"
       class="piece"

@@ -23,7 +23,7 @@ export const useBoard = () => {
 
   // sfen文字列を基にした二次元配列の盤面
   const board = computed<Board>(() => {
-    return sfenToBoard(sfen.value)
+    return sfenToBoard(sfen.value.position)
   })
 
   // positionをキーにした盤面
@@ -122,7 +122,8 @@ export const useBoard = () => {
       return dan
     })
 
-    state.value.sfen = boardToSfen(newBoard)
+    // const newSfen = `position sfen ${sfen.value.position} ${gameState.value.} ${captured/-} ${count} moves ${move1} ${move2} ... ${moven}`
+    // state.value.sfen = boardToSfen(newBoard)
   }
 
   return {

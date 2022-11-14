@@ -9,7 +9,23 @@ export default defineNuxtConfig({
   },
   srcDir: 'src/',
   css: ['@/assets/styles/index.scss'],
-  modules: ['@pinia/nuxt'],
+  modules: [
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['storeToRefs'],
+      },
+    ],
+  ],
+  imports: {
+    dirs: ['./store'],
+  },
+  app: {
+    pageTransition: {
+      name: 'slide',
+      mode: 'out-in',
+    },
+  },
   vite: {
     define: {
       'process.env.DEBUG': false,

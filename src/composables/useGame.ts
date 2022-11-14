@@ -9,7 +9,7 @@ interface GameState {
 export const useGame = () => {
   // ゲームの状態を保持
   const gameState = useState<GameState>('gameState', () => ({
-    player: TEBAN.GOTE,
+    player: TEBAN.SENTE,
     teban: TEBAN.SENTE,
     selectedPiece: null,
   }))
